@@ -40,13 +40,51 @@ public class testSelectionSort {
 
     public void testMixed(){
 
-        /** Test data contains with both positive, negative and zeros **/
-    }
+      /** Test data contains with both positive, negative and zeros **/
+      int[] arr = new int[5];
+      arr[0] = 8;
+      arr[1] = -9;
+      arr[2] = 0;
+      arr[3] = -10;
+      arr[4] = -4;
 
-    public void testDuplicates(){
+      int[] Sortedarr = new int[5];
+      Sortedarr[0] = -10;
+      Sortedarr[1] = -9;
+      Sortedarr[2] = -4;
+      Sortedarr[3] = 0;
+      Sortedarr[4] = 8;
+      SelectionSort temp = new SelectionSort();
+      temp.basicSelectionSort(arr);
+      Assert.assertArrayEquals(arr, Sortedarr);
+      /** Test data contains negative values only **/
+      System.out.print("Test Mixed: Passed!");
+  }
 
-        /** Test data contains duplicates **/
-    }
+  public void testDuplicates(){
+
+      /** Test data contains duplicates **/
+      int[] arr = new int[5];
+      arr[0] = -5;
+      arr[1] = -5;
+      arr[2] = -7;
+      arr[3] = 3;
+      arr[4] = -4;
+
+      int[] Sortedarr = new int[5];
+      Sortedarr[0] = -7;
+      Sortedarr[1] = -5;
+      Sortedarr[2] = -5;
+      Sortedarr[3] = -4;
+      Sortedarr[4] = 3;
+      SelectionSort temp = new SelectionSort();
+      temp.basicSelectionSort(arr);
+      Assert.assertArrayEquals(arr, Sortedarr);
+      /** Test data contains negative values only **/
+      System.out.print("Test Duplicates: Passed!");
+  }
+
+
 
 
 }
